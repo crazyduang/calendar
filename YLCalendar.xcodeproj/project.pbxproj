@@ -15,6 +15,11 @@
 		843CC1301D7607C100741058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843CC12E1D7607C100741058 /* LaunchScreen.storyboard */; };
 		843CC13B1D7607C100741058 /* YLCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CC13A1D7607C100741058 /* YLCalendarTests.m */; };
 		843CC1461D7607C100741058 /* YLCalendarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CC1451D7607C100741058 /* YLCalendarUITests.m */; };
+		843CC1561D760C7B00741058 /* YLCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CC1551D760C7B00741058 /* YLCalendarView.m */; };
+		843CC1591D76286D00741058 /* YLCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CC1581D76286D00741058 /* YLCalendarCell.m */; };
+		843CC15D1D7636ED00741058 /* UIColor+YLLazy.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CC15C1D7636ED00741058 /* UIColor+YLLazy.m */; };
+		843CC1601D76485F00741058 /* bt_next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843CC15E1D76485F00741058 /* bt_next@2x.png */; };
+		843CC1611D76485F00741058 /* bt_previous@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843CC15F1D76485F00741058 /* bt_previous@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,14 @@
 		843CC1411D7607C100741058 /* YLCalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YLCalendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		843CC1451D7607C100741058 /* YLCalendarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLCalendarUITests.m; sourceTree = "<group>"; };
 		843CC1471D7607C100741058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843CC1541D760C7B00741058 /* YLCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCalendarView.h; sourceTree = "<group>"; };
+		843CC1551D760C7B00741058 /* YLCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCalendarView.m; sourceTree = "<group>"; };
+		843CC1571D76286D00741058 /* YLCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCalendarCell.h; sourceTree = "<group>"; };
+		843CC1581D76286D00741058 /* YLCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCalendarCell.m; sourceTree = "<group>"; };
+		843CC15B1D7636ED00741058 /* UIColor+YLLazy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YLLazy.h"; sourceTree = "<group>"; };
+		843CC15C1D7636ED00741058 /* UIColor+YLLazy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YLLazy.m"; sourceTree = "<group>"; };
+		843CC15E1D76485F00741058 /* bt_next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_next@2x.png"; sourceTree = "<group>"; };
+		843CC15F1D76485F00741058 /* bt_previous@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_previous@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +118,7 @@
 				843CC1241D7607C100741058 /* AppDelegate.m */,
 				843CC1261D7607C100741058 /* ViewController.h */,
 				843CC1271D7607C100741058 /* ViewController.m */,
+				843CC1531D760C2E00741058 /* YL_Calendar */,
 				843CC1291D7607C100741058 /* Main.storyboard */,
 				843CC12C1D7607C100741058 /* Assets.xcassets */,
 				843CC12E1D7607C100741058 /* LaunchScreen.storyboard */,
@@ -138,6 +152,21 @@
 				843CC1471D7607C100741058 /* Info.plist */,
 			);
 			path = YLCalendarUITests;
+			sourceTree = "<group>";
+		};
+		843CC1531D760C2E00741058 /* YL_Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				843CC1541D760C7B00741058 /* YLCalendarView.h */,
+				843CC1551D760C7B00741058 /* YLCalendarView.m */,
+				843CC1571D76286D00741058 /* YLCalendarCell.h */,
+				843CC1581D76286D00741058 /* YLCalendarCell.m */,
+				843CC15B1D7636ED00741058 /* UIColor+YLLazy.h */,
+				843CC15C1D7636ED00741058 /* UIColor+YLLazy.m */,
+				843CC15E1D76485F00741058 /* bt_next@2x.png */,
+				843CC15F1D76485F00741058 /* bt_previous@2x.png */,
+			);
+			path = YL_Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +272,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843CC1611D76485F00741058 /* bt_previous@2x.png in Resources */,
 				843CC1301D7607C100741058 /* LaunchScreen.storyboard in Resources */,
 				843CC12D1D7607C100741058 /* Assets.xcassets in Resources */,
 				843CC12B1D7607C100741058 /* Main.storyboard in Resources */,
+				843CC1601D76485F00741058 /* bt_next@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				843CC1281D7607C100741058 /* ViewController.m in Sources */,
+				843CC1561D760C7B00741058 /* YLCalendarView.m in Sources */,
 				843CC1251D7607C100741058 /* AppDelegate.m in Sources */,
+				843CC1591D76286D00741058 /* YLCalendarCell.m in Sources */,
+				843CC15D1D7636ED00741058 /* UIColor+YLLazy.m in Sources */,
 				843CC1221D7607C100741058 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +532,7 @@
 				843CC14C1D7607C100741058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		843CC14D1D7607C100741058 /* Build configuration list for PBXNativeTarget "YLCalendarTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +541,7 @@
 				843CC14F1D7607C100741058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		843CC1501D7607C100741058 /* Build configuration list for PBXNativeTarget "YLCalendarUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +550,7 @@
 				843CC1521D7607C100741058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
